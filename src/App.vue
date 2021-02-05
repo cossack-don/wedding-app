@@ -3,9 +3,9 @@
     <!-- start navigation  LEFT SIDEBAR-->
     <v-navigation-drawer v-model="drawer" app>
       <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="title"> Vuetify Todo! </v-list-item-title>
-          <v-list-item-subtitle> Best Todo! </v-list-item-subtitle>
+        <v-list-item-content >
+          <v-list-item-title class="title purple--text"> Свадьба в Краснодаре </v-list-item-title>
+          <v-list-item-subtitle class="purple--text"> 21 Августа 2021 года </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -29,44 +29,68 @@
     <!-- START HEADER -->
     <v-app-bar
       app
-      color="primary"
+      color="#3faeac"
       dark
       prominent
-      :src="go()"
-      height="200px"
+      src=""
+     height="60px"
+      width="100%"
+      
     >
-      <template v-slot:img="{ props }">
+    <!-- :height="heights" -->
+      <!-- <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+          
         ></v-img>
-      </template>
+      </template> -->
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Vuetify Todo</v-app-bar-title>
+      <!-- <v-app-bar-title text-center>Свадьба</v-app-bar-title> -->
 
-      <v-spacer></v-spacer>
+<!-- <h3 mt-15>33</h3> -->
+    <!-- <template> 
+      <h3 class="mt-15 main-header-title" >Елена и Сергей</h3> 
+    </template> -->
+<v-toolbar-title>Свадьба
+  <v-icon color="yellow" size="35">mdi-ring</v-icon>
+  </v-toolbar-title>
 
-      <!-- <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn> -->
+<v-spacer></v-spacer>
+    <v-btn icon :to="home">
+        <v-icon>mdi-home</v-icon>
+      </v-btn> 
+  
     </v-app-bar>
     <!-- END HEADER -->
 
     <!-- START MAIN CONTENT -->
     <v-main>
-      <!--  -->1
-      <!-- <img :src="go()" alt=""> -->
+   
       <router-view></router-view>
     </v-main>
     <!-- END MAIN CONTENT -->
+
+     <v-footer
+    dark
+    padless
+    app
+    height="30px "
+  >
+    <v-card
+      class="flex"
+      flat
+      tile
+    >
+
+
+      <v-card-text class="pa-1 white--text text-center">
+        <strong>© Журавлёв С.И. Все права защищены, 2021 г.
+        </strong>
+      </v-card-text>
+    </v-card>
+  </v-footer>
   </v-app>
 </template>
 
@@ -75,9 +99,15 @@ export default {
   data: () => ({
     drawer: null,
     items: [
-      { title: "Todo", icon: "mdi-format-list-checks", to: "/" },
-      { title: "About", icon: "mdi-help-box", to: "/about" },
+      // mdi-whatsapp
+      // mdi-instagram
+      { title: "Главная", icon: "mdi-home", to: "/" },
+      { title: "Церемония", icon: "mdi-map-marker", to: "/ceremony" },
+      { title: "Такси и Отели", icon: "mdi-taxi", to: "/taxis-and-hotels" },
+      { title: "Контакты", icon: "mdi-phone-in-talk", to: "/contacts" },
+      { title: "О нас", icon: "mdi-human-male-female", to: "/about-us" },
     ],
+    home: "/",
     images: [
       {
         id:1,
@@ -122,6 +152,48 @@ console.log(3)
     },
 
   },
+computed: {
+  // https://vuetifyjs.com/en/features/breakpoints/#breakpoint-service
+      //   heights () {
+      //   switch (this.$vuetify.breakpoint.name) {
+      //     case 'xs': return 200
+      //     case 'sm': return 200
+      //     case 'md': return 200
+      //     case 'lg': return 150
+      //     case 'xl': return 150
+      //   }
+      // },
+}
+
+   
 
 };
 </script>
+
+<style>
+.main-header-title{
+  font-family: 'Yusei Magic', sans-serif;
+background: rgb(172,232,230);
+background: linear-gradient(90deg, rgba(172,232,230,0.8183648459383753) 0%, rgba(36,201,196,0.8491771708683473) 96%, rgba(172,232,230,0.8687850140056023) 100%);
+    border-radius: 50px;
+    /* padding: 15px; */
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    border: solid #cd72b7 5px;
+  color:#4b51a6;
+
+   
+}
+
+@media (max-width: 600px) {
+  .main-header-title {
+    font-size: 20px;
+  }
+}
+
+
+</style>
