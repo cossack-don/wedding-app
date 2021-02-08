@@ -2,11 +2,11 @@
   <div class="contacts pa-5">
 
     <h3 class="h3 pb-4">Контакты</h3>
-<!-- Список контактов -->
+    <!-- Список контактов -->
     <v-card
     max-width="100%"
     class="mx-auto"
-  >
+    >
 
 
     <v-list three-line>
@@ -107,15 +107,21 @@
 <script>
   export default {
     data: () => ({
+
       items: [
         // ФОТО 128 НА 128 АВАТАРКИ
+        // CЖАТЬ ФОТО
+        // ПРОВЕРИТЬ АКТУАЛЬНОСТЬ ТЕЛЕФОНОВ
        { header: 'Жених и Невеста' },
+
         {
           avatar: require('../assets/foto-contacts-page/2.jpg'),
           title: 'Журавлёв Сергей Игоревич',
           subtitle: `<span class="text--primary">Телефон: <a href="tel:+79660890786"> 8-966-089-07-86</a></span>`,
         },
+
         { divider: true, inset: true },
+
         {
           avatar: require('../assets/foto-contacts-page/1.jpg'),
           title: 'Фоменко Елена Андреевна',
@@ -124,31 +130,40 @@
  
 
       ],
+
       parents: [
          { header: 'Родители' },
+
         {
           avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
           title: 'Фоменко Светлана Евгеньевна',
           subtitle: `<span class="text--primary">Телефон: <a href="tel:+79660890786"> 8-966-089-07-86</a></span>`,
         },
+
         { divider: true, inset: true },
+
         {
           avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
           title: 'Фоменко Андрей Валентинович',
           subtitle: `<span class="text--primary">Телефон: <a href="tel:+79660890786"> 8-966-089-07-86</a></span>`,
         },
+
         { divider: true, inset: true },
-               {
+
+        {
           avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
           title: 'Журавлева Ольга Ивановна',
           subtitle: `<span class="text--primary">Телефон: <a href="tel:+79660890786"> 8-966-089-07-86</a></span>`,
         },
+
         { divider: true, inset: true },
+
         {
           avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
           title: 'Журавлев Игорь Николаевич',
           subtitle: `<span class="text--primary">Телефон: <a href="tel:+79660890786"> 8-966-089-07-86</a></span>`,
         },
+
       ]
     }),
   }

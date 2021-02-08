@@ -1,12 +1,14 @@
 <template>
   <div class="about-us pa-5">
+    <!-- TITLE -->
     <h3 class="h3 pb-4">О нас</h3>
 
     <v-row>
+
     <v-col
       v-for="(foto, index) in galleryFotos"
       :key="index"
-      class="d-flex child-flex"
+      class="d-flex child-flex  pa-2"
       cols="4"
     >
 
@@ -14,7 +16,9 @@
         :src="foto.img"
         aspect-ratio="1"
         class="grey lighten-2"
+        
       >
+
 
       <template v-slot:placeholder>
         <v-row
@@ -39,7 +43,9 @@
 
 <script>
   export default {
+
     data: () => ({
+
       model: 0,
       colors: [
         'primary',
@@ -49,30 +55,36 @@
         'orange',
       ],
 
+// фото в галлереи
+// CЖАТЬ ВСЕ ФОТО
     galleryFotos: [
+
     {
       img: require('../assets/header.jpg')
     },
+
     {
       img: require('../assets/foto-gallery-about-us/1.jpg')
     },
-        {
+
+    {
       img: require('../assets/foto-gallery-about-us/2.jpg')
     },
-        {
+
+    {
       img: require('../assets/foto-gallery-about-us/3.jpg')
     },
 
-        {
+    {
       img: require('../assets/foto-gallery-about-us/4.jpg')
     },
+
     {
       img: require('../assets/1.jpg')
     },
 
     ]
     }),
-
 
   }
 </script>
@@ -82,4 +94,5 @@
   /* background: #ace8e6; */
       background: beige;
 }
+
 </style>

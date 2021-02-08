@@ -14,13 +14,20 @@
         cols="12"
       >
       <h1>СЖАТЬ ВСЕ КАРТИНКИ, ПРОВЕРИТЬ ВСЕ ФИО, ПРОВЕРИТЬ КАК НА АДАПТИВЕ ВСЕ БУДЕТ, АКТУАЛЬНОСТЬ ИНФЫ</h1>
+      <p>о нас - установить фото и сжать их</p>
+      <p>контакты - установить аватарки и сжать их, проверить актуальность телов</p>
+      <p>церемония уточнить время и адреса</p>
+
+      <p>протестить кроссбраузерность и адаптив</p>
+
+
         <h1 class="display-1 mb-4 h3">
           До свадьбы осталось:
         </h1>
-       
-
-
-
+   
+<video width="300" autoplay="autoplay" muted="muted" loop="loop" src="../assets/video.mp4"></video>
+<video width="300" autoplay="autoplay" muted="muted" loop="loop" src="../assets/video_2.mp4"></video>
+<!-- https://pixabay.com/ru/videos/search/%D1%81%D0%B2%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0/ -->
 <div id="countdown" class="countdown">
   <div class="countdown-number days-block">
     <span class="days countdown-time">00</span>
@@ -40,29 +47,28 @@
   </div>
 </div>
 <p>Cжать все картинки в spa</p>
-<p>счетчик</p><p>счетчик</p><p>счетчик</p>
+<h3>Как доехать до Ресторана, РЖД, Аэропорт</h3>
+          <div style=" position:relative;overflow:hidden;" @click="mapMainCheckPointOnClick" id="map-wrap-four">
+      <iframe style="pointer-events: none;" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa3cc3445f1e2ff528a10faed7b52811f0d4237a102ca5620618a45308c1d2f8c&amp;source=constructor" width="100%" height="360" frameborder="0"></iframe>
+    </div>
+
+    Тона свадьбы 3-5 шт кружочки
+
+    хештег имя + лого инст и ссылка
+
+
       </v-col>
     </v-row>
   </v-parallax>
-    <!-- https://vuetifyjs.com/en/components/parallax/#content -->
-<!-- 
-    https://vuetifyjs.com/en/components/images/#grid
-
-    https://vuetifyjs.com/en/components/footer/#teal-footer
-
-    https://vuetifyjs.com/en/components/expansion-panels/#disabled -->
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+
 
 
 export default {
- 
-  components: {
-    
-  },
+
   data() {
     return {
       h1: '6rem'
@@ -116,7 +122,19 @@ function getTimeRemaining(endtime) {
 initializeClock('countdown', deadline); 
 
 
-    }
+    },
+          mapMainCheckPointOnClick() {
+      document.addEventListener('click', function(e) {
+          let map = document.querySelector('#map-wrap-four iframe')
+
+          if(e.target.id === 'map-wrap-four') {
+              map.style.pointerEvents = 'all'
+          } else {
+              map.style.pointerEvents = 'none'
+          }
+
+            })
+    },
   },
   mounted() {
     this.c()
