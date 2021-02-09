@@ -25,8 +25,8 @@
           До свадьбы осталось:
         </h1>
    
-<video width="300" autoplay="autoplay" muted="muted" loop="loop" src="../assets/video.mp4"></video>
-<video width="300" autoplay="autoplay" muted="muted" loop="loop" src="../assets/video_2.mp4"></video>
+<!-- <video width="300" autoplay="autoplay" muted="muted" loop="loop" src="../assets/video.mp4"></video>
+<video width="300" autoplay="autoplay" muted="muted" loop="loop" src="../assets/video_2.mp4"></video> -->
 <!-- https://pixabay.com/ru/videos/search/%D1%81%D0%B2%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0/ -->
 <div id="countdown" class="countdown">
   <div class="countdown-number days-block">
