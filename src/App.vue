@@ -7,7 +7,8 @@
       <v-list-item>
         <v-list-item-content >
           <v-list-item-title class="title purple--text"> Свадьба в Краснодаре </v-list-item-title>
-          <v-list-item-subtitle class="purple--text"> 21 Августа 2021 года </v-list-item-subtitle>
+          <v-list-item-subtitle 
+          class="purple--text"> 21 Августа 2021 года </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 

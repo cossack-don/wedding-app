@@ -16,7 +16,6 @@
         :src="foto.img"
         aspect-ratio="1"
         class="grey lighten-2"
-        
       >
 
 
