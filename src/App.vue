@@ -1,7 +1,8 @@
 <template>
   <v-app id="inspire">
+
     <!-- start navigation  LEFT SIDEBAR-->
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer v-model="drawer" temporary app>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title purple--text">
@@ -34,7 +35,7 @@
     <!-- START HEADER -->
     <v-app-bar
       app
-      color="#3faeac"
+      color="#CDE4F3"
       dark
       prominent
       src=""
@@ -45,8 +46,8 @@
 
       <v-spacer></v-spacer>
       <v-toolbar-title class="font-lobster font-size-lobster"
-        >Елена и Сергей
-        <v-icon color="yellow" size="35">mdi-ring</v-icon>
+        >Cергей и Елена
+        <v-icon color="yellow" size="35" class="icon-ring-header">mdi-ring</v-icon>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -93,4 +94,11 @@ export default {
 </script>
 
 <style>
+    /* скрываю иконку кольцо */
+  @media (max-width: 360px) {
+    .icon-ring-header {
+      display: none !important;
+    }
+  }
+
 </style>
