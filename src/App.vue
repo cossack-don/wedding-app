@@ -82,7 +82,7 @@ export default {
       // mdi-whatsapp
       // mdi-instagram
       { title: "Главная", icon: "mdi-home", to: "/" },
-      { title: "Церемония", icon: "mdi-map-marker", to: "/ceremony" },
+      { title: "Программа", icon: "mdi-map-marker", to: "/ceremony" },
       { title: "Такси и Отели", icon: "mdi-taxi", to: "/taxis-and-hotels" },
       { title: "Контакты", icon: "mdi-phone-in-talk", to: "/contacts" },
       // { title: "О нас", icon: "mdi-human-male-female", to: "/about-us" },

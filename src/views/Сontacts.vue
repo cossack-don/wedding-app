@@ -1,6 +1,7 @@
 <template>
   <div class="contacts pa-5">
-    <h3 class="h3 pb-4">Контакты</h3>
+    <img src="../assets/2.png" alt="rose" class="element-rose">
+    <p class="h3 pb-4 font-lobster">Контакты</p>
     <!-- Список контактов -->
     <v-card max-width="100%" class="mx-auto">
       <v-list three-line>
@@ -99,9 +100,9 @@ export default {
       { divider: true, inset: true },
 
       {
-        avatar: require("../assets/foto-contacts-page/1.jpg"),
+        avatar: require("../assets/foto-contacts-page/girl.jpg"),
         title: "Фоменко Елена",
-        subtitle: `<span class="text--primary">Телефон: <a href="tel:+79660890786"> 8-966-089-07-86</a></span>`,
+        subtitle: `<span class="text--primary">Телефон: <a href="tel:+79998155660"> 8-999-815-56-60</a></span>`,
       },
     ],
 
@@ -111,31 +112,31 @@ export default {
       {
         avatar: "https://cdn.vuetifyjs.com/images/lists/3.jpg",
         title: "Фоменко Светлана <br> Евгеньевна",
-        subtitle: `<span class="text--primary">Телефон: <a href="tel:+79660890786"> 8-966-089-07-86</a></span>`,
+        subtitle: `<span class="text--primary">Телефон: <a href="tel:+79180243600"> 8-918-024-36-00</a></span>`,
       },
 
       { divider: true, inset: true },
 
       {
-        avatar: "https://cdn.vuetifyjs.com/images/lists/4.jpg",
+        avatar: require("../assets/foto-contacts-page/man_2.jpg"),
         title: "Фоменко Андрей <br> Валентинович",
-        subtitle: `<span class="text--primary">Телефон: <a href="tel:+79660890786"> 8-966-089-07-86</a></span>`,
+        subtitle: `<span class="text--primary">Телефон: <a href="tel:+79181722320"> 8-918-172-23-20</a></span>`,
       },
 
       { divider: true, inset: true },
 
       {
-        avatar: "https://cdn.vuetifyjs.com/images/lists/3.jpg",
-        title: "Журавлева Ольга <br> Ивановна",
-        subtitle: `<span class="text--primary">Телефон: <a href="tel:+79660890786"> 8-966-089-07-86</a></span>`,
+        avatar: require("../assets/foto-contacts-page/woman.jpg"),
+        title: "Журавлёва Ольга <br> Ивановна",
+        subtitle: `<span class="text--primary">Телефон: <a href="tel:+79031228847"> 8-903-122-88-47</a></span>`,
       },
 
       { divider: true, inset: true },
 
       {
-        avatar: "https://cdn.vuetifyjs.com/images/lists/4.jpg",
-        title: "Журавлев Игорь <br> Николаевич",
-        subtitle: `<span class="text--primary">Телефон: <a href="tel:+79660890786"> 8-966-089-07-86</a></span>`,
+        avatar: require("../assets/foto-contacts-page/man.jpg"),
+        title: "Журавлёв Игорь <br> Николаевич",
+        subtitle: `<span class="text--primary">Телефон: <a href="tel:+79055702615"> 8-905-570-26-15</a></span>`,
       },
     ],
   }),
@@ -144,7 +145,8 @@ export default {
 
 <style>
 .contacts {
-  background: #ace8e6;
-  height: 100%;
+  /* background: #ace8e6; */
+background: aliceblue;
+height: 100%;
 }
 </style>

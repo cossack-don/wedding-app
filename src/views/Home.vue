@@ -1,6 +1,8 @@
 <template>
   <div class="home">
+    <img src="../assets/2.png" alt="rose" class="element-rose">
     <section class="home-first-block-wrapper home-first-block">
+
       <div class="home-first-block__block-info block-info-first"></div>
 
       <div class="wrapper-first-block-text">
@@ -8,6 +10,8 @@
           <p class="wrapper-first-block-text__text">История о том, как все прекрасно сложилось</p>
       </div>
     </section>
+
+<img src="../assets/2.png" alt="rose" class="element-rose">
 
     <section class="home-second-block-wrapper home-second-block">
       <div class="home-second-block__block-info"></div>
@@ -46,6 +50,8 @@
           </div>
       </div>
     </section>
+
+<img src="../assets/2.png" alt="rose" class="element-rose element-rose-width-1116">
 
     <section class="home-third-block-wrapper home-third-block">
       <div class="home-third-block__block-info"></div>
@@ -179,11 +185,12 @@ display: flex;
 
 /* FIRST BLOCK SECTION */
 .home-first-block-wrapper {
-  background: url(../assets/12.jpg);
+  /* background: url(../assets/12.jpg); */
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height:250px;
 
   position: relative;
 }
@@ -193,10 +200,14 @@ display: flex;
   width: 50%;
   height:250px;
   border-radius: 15px;
-  background: #a5ab9d;
+  /* background: #a5ab9d; */
+  background: url(../assets/12.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   opacity: 0.7;
   /* bottom: 25px; */
-  top: 25%;
+  /* top: 25%; */
   transform: translateY(-25%);
   left: 50%;
   transform: translateX(-50%);
@@ -234,7 +245,7 @@ text-align: center;
     position: absolute;
 text-align: center;
   height:250px;
-  top: 28%;
+  /* top: 28%; */
    transform: translateY(-28%);
 
   /* bottom: 0; */
@@ -243,12 +254,12 @@ text-align: center;
 }
 /* SECOND BLOCK */
 .home-second-block-wrapper {
-  background: url(../assets/123.jpg);
+  /* background: url(../assets/123.jpg); */
   /* background: #cee1f0; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 700px;
+  height: 450px;
 
   position: relative;
 }
@@ -256,9 +267,13 @@ text-align: center;
   position: absolute;
   width: 50%;
   height: 450px;
-  background: #d3bbc8;
+  /* background: #d3bbc8; */
+   background: url(../assets/33.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 15px;
-  top: 25%;
+  /* top: 25%; */
   transform: translateY(-25%);
   left: 50%;
   transform: translateX(-50%);
@@ -271,11 +286,11 @@ text-align: center;
 /* third  SECTION */
 
 .home-third-block-wrapper {
-  background: url(../assets/thid-block-bg.jpg);
+  /* background: url(../assets/thid-block-bg.jpg); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: 350px;
 
   position: relative;
 }
@@ -283,11 +298,15 @@ text-align: center;
   position: absolute;
   width: 50%;
   height:300px;
-  background: #cde4f4;
+  /* background: #cde4f4; */
+     background: url(../assets/123.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 15px;
   opacity: 0.7;
   /* bottom: 25px; */
-  top: 25%;
+  /* top: 25%; */
   transform: translateY(-25%);
   left: 50%;
   transform: translateX(-50%);
@@ -311,7 +330,7 @@ text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 23%;
+    /* top: 23%; */
     }
 
 .wrapper-first-block-text__title,
@@ -343,16 +362,19 @@ text-align: center;
 /* SECOND BLOCK */
   @media (max-width: 1116px)  {
     .home-second-block-wrapper {
-      height: 1000px;
+      /* height: 1000px; */
       
     }
+    .element-rose-width-1116 {
+      margin-top: 150px !important;
+    }
     .home-second-block__block-info {
-      height:65%;
+      height:125%;
       width: 85%;
     }
   }
 
-@media (max-width: 720px) {
+@media (max-width: 790px) {
   .wrapper-second-block-text__title {
   font-size: 35px !important;
   margin-bottom: 20px !important;
@@ -374,7 +396,9 @@ font-size: 25px !important;
 .countdown-text {
   font-size: 15px;
 }
-
+.home-second-block__block-info {
+  height: 135%;
+}
 }
 
 /* THIRD BLOCK */
@@ -382,7 +406,7 @@ font-size: 25px !important;
 
 .home-third-block__block-info {
   width: 80%;
-  top: 18%;
+  /* top: 18%; */
   height: 320px;
 }
 
@@ -406,8 +430,39 @@ font-size: 25px !important;
     }
 
 
+/* эЛЕМЕНТ ЦВЕТОВ */
+.element-rose {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@media(max-width: 600px) {
+.element-rose {
+  width: 80%;
+}
+}
+.home {
+background: #85BDFF;
+background: -webkit-linear-gradient(left, #85BDFF, #FFD5E4);
+background: -moz-linear-gradient(left, #85BDFF, #FFD5E4);
+background: linear-gradient(to right, #85BDFF, #FFD5E4);
+position: relative;
+
+}
+/* .home::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ background-repeat: unset;
+  
+  background-size: cover;
+background: url(../assets/el.png) repeat-y;
 
 
-
+} */
 </style>
 

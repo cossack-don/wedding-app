@@ -1,96 +1,28 @@
 <template>
-  <div class="ceremony">
-   
-  <v-parallax
-    class="pt-4"
-    src="../assets/1.jpg"
-    height="1000"
-    pb-5
-  >
-    <v-row
-      justify="center"
-    >
-      <v-col
-        class="text-center"
-        cols="12"
-      >
-        <h1 class="mb-4 h3 font-lobster">
-          Программа
-        </h1>
-      
+<div class="ceremony">
 
-        <div  class="main-wrapper-ceremony ">
-          <div class="main-wrapper-ceremony__map ">
-        
-            <div @click="mapUseOnClick" class="wrapper-frame-map" id="map-wrap" >
+    <div class="first-day-container">
+
+      <div @click="mapUseOnClick" class="first-day-map wrapper-frame-map" id="map-wrap" >
                 <iframe style="pointer-events: none;" class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a1c0bd76ecadabcf769205c7b4864f810ac8442ae0e6ff8e1af15c4d6fd0842&amp;source=constructor" width="100%" height="90%" frameborder="0"></iframe>
-            </div>
-
-        </div>
-
-
-      <div class="main-wrapper-ceremony__list-events">
-         <v-card
-          max-width="100%"
-          >
-
-
-    <v-list color="#ace8e6">
-      <!-- ITEM -->
-      <div class="pt-2 ceremony-title"><p>Первый день свадьбы 21.08.2021</p></div>
-
-      <v-list-item v-for="(listItem,index) in listSchedule" :key="index">
-        <v-list-item-icon>
-          <v-icon color="indigo">
-            <!-- mdi-phone -->
-            {{listItem.icon}}
-          </v-icon>
-        </v-list-item-icon>
-
-        <v-list-item-content>
-          <v-list-item-title class="text-left">{{listItem.title}}</v-list-item-title>
-                  <v-list-item-title class="text-left">{{listItem.city}}</v-list-item-title>
-                  <v-list-item-title class="text-left">{{listItem.adress}}</v-list-item-title>
-        </v-list-item-content>
-  
-       
-      </v-list-item>
-<!-- ITEM -->  
-    </v-list>
-   
-        <v-list color="#ace8e6">
-      <!-- ITEM -->
-      <div class="ceremony-title"><p>Второй день свадьбы - 22.08.2021</p></div>
-
-      <v-list-item v-for="(listItem,index) in dayTwoListSchedule" :key="index"  class="">
-        <v-list-item-icon>
-          <v-icon color="indigo">
-            <!-- mdi-phone -->
-            {{listItem.icon}}
-          </v-icon>
-        </v-list-item-icon>
-
-        <v-list-item-content>
-          <v-list-item-title class="text-left color-text-white">{{listItem.title}}</v-list-item-title>
-
-        </v-list-item-content>
-       
-      </v-list-item>
-<!-- ITEM -->  
-    </v-list>
-  </v-card>
-
-        
       </div>
 
+      <div class="first-day-list">1</div>
+
     </div>
-      </v-col>
 
-    </v-row>
+    <!-- second day -->
 
-  </v-parallax>
+    <div class="second-day-container">
 
-  </div>
+      
+      <div class="second-day-list">1</div>
+            <div @click="mapUseOnClick" class="second-day-map wrapper-frame-map" id="map-wrap" >
+                <iframe style="pointer-events: none;" class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a1c0bd76ecadabcf769205c7b4864f810ac8442ae0e6ff8e1af15c4d6fd0842&amp;source=constructor" width="100%" height="90%" frameborder="0"></iframe>
+      </div>
+    </div>
+
+</div>
 </template>
 
 <script>
@@ -225,5 +157,59 @@ height: 600px;
 }
 }
 
-</style>
 
+/* НОВЫЕ СТИЛИ */
+.ceremony {
+background: #57D7E5;
+background: -webkit-linear-gradient(left, #57D7E5, #FFD5E4);
+background: -moz-linear-gradient(left, #57D7E5, #FFD5E4);
+background: linear-gradient(to right, #57D7E5, #FFD5E4);
+height: 100%;
+}
+/* .ceremony::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ background-repeat: unset;
+  
+  background-size: cover;
+background: url(../assets/el.png) repeat;
+
+
+} */
+
+/* first */
+.first-day-container {
+  display: flex;
+}
+
+.first-day-map {
+  background: red;
+  height: 200px;
+  width: 100%;
+}
+
+.first-day-list {
+  background: green;
+  height: 200px;
+  width: 100%;
+}
+/* second */
+.second-day-container {
+  display: flex;
+}
+
+.second-day-map {
+  background: yellow;
+  height: 200px;
+  width: 100%;
+}
+
+.second-day-list {
+  background: pink;
+  height: 200px;
+  width: 100%;
+}
+
+</style>
