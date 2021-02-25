@@ -82,6 +82,7 @@ methods:{
 
 .taxis-and-hotels {
 background: aliceblue;
+height: 100%;
 }
 
 #map-wrap-two {

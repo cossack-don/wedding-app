@@ -179,7 +179,7 @@ display: flex;
 
 /* FIRST BLOCK SECTION */
 .home-first-block-wrapper {
-  background: url(../assets/first-block-bg.jpg);
+  background: url(../assets/12.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -243,7 +243,7 @@ text-align: center;
 }
 /* SECOND BLOCK */
 .home-second-block-wrapper {
-  background: url(../assets/bg.jpg);
+  background: url(../assets/123.jpg);
   /* background: #cee1f0; */
   background-repeat: no-repeat;
   background-position: center;

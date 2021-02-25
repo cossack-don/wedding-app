@@ -45,7 +45,7 @@
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-spacer></v-spacer>
-      <v-toolbar-title class="font-lobster font-size-lobster"
+      <v-toolbar-title class="font-lobster font-size-lobster header-main-title" 
         >Cергей и Елена
         <v-icon color="yellow" size="35" class="icon-ring-header">mdi-ring</v-icon>
       </v-toolbar-title>
@@ -94,6 +94,11 @@ export default {
 </script>
 
 <style>
+
+/* Цвет Сергей и Елена в шапке */
+/* .header-main-title {
+  color: #4296af;
+} */
     /* скрываю иконку кольцо */
   @media (max-width: 360px) {
     .icon-ring-header {

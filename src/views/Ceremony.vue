@@ -14,8 +14,8 @@
         class="text-center"
         cols="12"
       >
-        <h1 class="display-1 mb-4 h3">
-          Церемония
+        <h1 class="mb-4 h3 font-lobster">
+          Программа
         </h1>
       
 

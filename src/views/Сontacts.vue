@@ -145,5 +145,6 @@ export default {
 <style>
 .contacts {
   background: #ace8e6;
+  height: 100%;
 }
 </style>
