@@ -1,6 +1,6 @@
 <template>
   <div class="contacts pa-5">
-    <img src="../assets/2.png" alt="rose" class="element-rose">
+    <img src="../assets/Tel.png" alt="rose" class="element-rose">
     <p class="h3 pb-4 font-lobster">Контакты</p>
     <!-- Список контактов -->
     <v-card max-width="100%" class="mx-auto">
@@ -11,6 +11,7 @@
             v-if="item.header"
             :key="item.header"
             v-text="item.header"
+            class="font-open-sans"
           ></v-subheader>
 
           <v-divider
@@ -49,6 +50,7 @@
             v-if="item.header"
             :key="item.header"
             v-text="item.header"
+            class="font-open-sans"
           ></v-subheader>
 
           <v-divider
@@ -110,7 +112,7 @@ export default {
       { header: "Родители" },
 
       {
-        avatar: "https://cdn.vuetifyjs.com/images/lists/3.jpg",
+        avatar: require("../assets/foto-contacts-page/woman_2.png"),
         title: "Фоменко Светлана <br> Евгеньевна",
         subtitle: `<span class="text--primary">Телефон: <a href="tel:+79180243600"> 8-918-024-36-00</a></span>`,
       },
@@ -146,7 +148,12 @@ export default {
 <style>
 .contacts {
   /* background: #ace8e6; */
-background: aliceblue;
+/* background: aliceblue; */
+background: #85BDFF;
+background: -webkit-linear-gradient(left, #85BDFF, #FFD5E4);
+background: -moz-linear-gradient(left, #85BDFF, #FFD5E4);
+background: linear-gradient(to right, #85BDFF, #FFD5E4);
+position: relative;
 height: 100%;
 }
 </style>

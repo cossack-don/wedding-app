@@ -1,13 +1,22 @@
 <template>
-<div class="ceremony">
-
+<div class="ceremony pa-5">
+<p class="h3 pb-4 font-lobster">Программа</p>
     <div class="first-day-container">
 
       <div @click="mapUseOnClick" class="first-day-map wrapper-frame-map" id="map-wrap" >
                 <iframe style="pointer-events: none;" class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a1c0bd76ecadabcf769205c7b4864f810ac8442ae0e6ff8e1af15c4d6fd0842&amp;source=constructor" width="100%" height="90%" frameborder="0"></iframe>
       </div>
 
-      <div class="first-day-list">1</div>
+      <div class="first-day-list">1-й день
+
+        <ul>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+        </ul>
+      </div>
 
     </div>
 
@@ -16,7 +25,16 @@
     <div class="second-day-container">
 
       
-      <div class="second-day-list">1</div>
+      <div class="second-day-list">2-й день
+
+                <ul>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+        </ul>
+      </div>
             <div @click="mapUseOnClick" class="second-day-map wrapper-frame-map" id="map-wrap" >
                 <iframe style="pointer-events: none;" class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a1c0bd76ecadabcf769205c7b4864f810ac8442ae0e6ff8e1af15c4d6fd0842&amp;source=constructor" width="100%" height="90%" frameborder="0"></iframe>
       </div>
@@ -118,9 +136,9 @@ margin-right: auto;
 }
 
 .yandex-map {
-padding: 5px;
+/* padding: 5px; */
 border-radius: 10px;
-background: #4b51a6;
+background: rgb(205, 228, 243);
 }
 
 
@@ -182,10 +200,12 @@ background: url(../assets/el.png) repeat;
 /* first */
 .first-day-container {
   display: flex;
+  
+  /* flex-wrap: wrap; */
 }
 
 .first-day-map {
-  background: red;
+  /* background: red; */
   height: 200px;
   width: 100%;
 }
@@ -194,14 +214,19 @@ background: url(../assets/el.png) repeat;
   background: green;
   height: 200px;
   width: 100%;
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 /* second */
 .second-day-container {
   display: flex;
+  /* flex-wrap: wrap; */
 }
 
 .second-day-map {
-  background: yellow;
+  /* background: yellow; */
   height: 200px;
   width: 100%;
 }
@@ -210,6 +235,10 @@ background: url(../assets/el.png) repeat;
   background: pink;
   height: 200px;
   width: 100%;
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 </style>

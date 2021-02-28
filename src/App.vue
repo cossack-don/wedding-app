@@ -5,10 +5,10 @@
     <v-navigation-drawer v-model="drawer" temporary app>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="title purple--text">
+          <v-list-item-title class="title title-left-sidebar ">
             Свадьба в Краснодаре
           </v-list-item-title>
-          <v-list-item-subtitle class="purple--text">
+          <v-list-item-subtitle class="title-left-sidebar ">
             21 Августа 2021 года
           </v-list-item-subtitle>
         </v-list-item-content>
@@ -64,8 +64,8 @@
     </v-main>
     <!-- END MAIN CONTENT -->
 
-    <v-footer dark padless app height="30px ">
-      <v-card class="flex" flat tile>
+    <v-footer  padless app height="30px" >
+      <v-card class="flex main-footer" flat tile>
         <v-card-text class="pa-1 white--text text-center">
           <strong>© Журавлёв С.И. Все права защищены, 2021 г. </strong>
         </v-card-text>
@@ -94,11 +94,19 @@ export default {
 </script>
 
 <style>
-
+.main-footer {
+  background: rgb(140, 190, 221)!important;
+  height: 100%;
+}
 /* Цвет Сергей и Елена в шапке */
 /* .header-main-title {
   color: #4296af;
 } */
+
+.title-left-sidebar {
+  color: rgb(112, 170, 209) !important;
+}
+
     /* скрываю иконку кольцо */
   @media (max-width: 360px) {
     .icon-ring-header {

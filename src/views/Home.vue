@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <img src="../assets/2.png" alt="rose" class="element-rose">
+   
+    <img src="../assets/z.png" alt="rose" class="element-rose">
     <section class="home-first-block-wrapper home-first-block">
 
       <div class="home-first-block__block-info block-info-first"></div>
@@ -11,7 +12,7 @@
       </div>
     </section>
 
-<img src="../assets/2.png" alt="rose" class="element-rose">
+<img src="../assets/Serdechko.png" alt="rose" class="element-rose">
 
     <section class="home-second-block-wrapper home-second-block">
       <div class="home-second-block__block-info"></div>
@@ -51,7 +52,7 @@
       </div>
     </section>
 
-<img src="../assets/2.png" alt="rose" class="element-rose element-rose-width-1116">
+<img src="../assets/z.png" alt="rose" class="element-rose element-rose-width-1116">
 
     <section class="home-third-block-wrapper home-third-block">
       <div class="home-third-block__block-info"></div>
@@ -65,12 +66,16 @@
 </template>
 
 <script>
+
+
 export default {
   data() {
     return {
       h1: "6rem",
     };
   },
+
+
   methods: {
     c() {
       function getTimeRemaining(endtime) {
@@ -156,7 +161,7 @@ display: flex;
 .days-block,
 .hours-block,
 .minutes-block {
-  background: rgb(63, 174, 172);
+  background: rgb(112, 170, 209);
   padding: 15px;
   display: flex;
   justify-content: center;
@@ -205,7 +210,7 @@ display: flex;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.7;
+  opacity: 0.4;
   /* bottom: 25px; */
   /* top: 25%; */
   transform: translateY(-25%);
@@ -277,11 +282,13 @@ text-align: center;
   transform: translateY(-25%);
   left: 50%;
   transform: translateX(-50%);
-   opacity: 0.7;
+   opacity: 0.4;
 }
 
 .wrapper-second-block-text__span {
-  color: #977aba;
+  /* color: #977aba; */
+  color: #ffffff;
+  /* letter-spacing: 1.4px; */
 }
 /* third  SECTION */
 
@@ -304,7 +311,7 @@ text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
-  opacity: 0.7;
+  opacity: 0.4;
   /* bottom: 25px; */
   /* top: 25%; */
   transform: translateY(-25%);
@@ -436,8 +443,8 @@ font-size: 25px !important;
     height: auto;
     display: block;
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 @media(max-width: 600px) {
 .element-rose {
@@ -452,17 +459,17 @@ background: linear-gradient(to right, #85BDFF, #FFD5E4);
 position: relative;
 
 }
-/* .home::before {
+.home::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
- background-repeat: unset;
+ background-repeat: no-repeat;
   
-  background-size: cover;
-background: url(../assets/el.png) repeat-y;
+  background-size: contain;
+background: url(../assets/ros.png) ;
 
 
-} */
+}
 </style>
 
