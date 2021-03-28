@@ -7,8 +7,8 @@
       <div class="home-first-block__block-info block-info-first"></div>
 
       <div class="wrapper-first-block-text">
-          <p class="wrapper-first-block-text__title font-lobster ">Ожнажды <br> произошло чудо</p>
-          <p class="wrapper-first-block-text__text">История о том, как все прекрасно сложилось</p>
+          <p class="wrapper-first-block-text__title font-lobster ">Приглашаем <br> на свадьбу!</p>
+          <p class="wrapper-first-block-text__text wrapper-first-block-text__text--white">Разделите с нами этот день, подарите свое тепло и поддержку!</p>
       </div>
     </section>
 
@@ -20,8 +20,9 @@
           <div class="wrapper-second-block-text">
           <p class="wrapper-second-block-text__title font-lobster ">Cергей и Елена</p>
           <p class="wrapper-second-block-text__text">
-          <span class="wrapper-second-block-text__span ">21 Августа 2021 года</span>
+          <span class="wrapper-second-block-text__span ">21 августа 2021 года</span>
           <br> г. Краснодар, ул.Вишняковой, 1/5 <br>
+          Ресторан "Олимп Hall" <br>
            Cбор гостей в 16:30 
            <span class="wrapper-second-block-text__span font-lobster"> <br> До торжества осталось:</span></p>
 
@@ -59,7 +60,7 @@
 
           <div class="wrapper-third-block-text">
           <p class="wrapper-third-block-text__title wrapper-third-block-text__title--big font-lobster ">Cпасибо</p>
-          <p class="wrapper-third-block-text__text wrapper-third-block-text__text--big">что разделили с нами этот особый день!</p>
+          <p class="wrapper-third-block-text__text wrapper-third-block-text__text--big">что разделите с нами этот особый день!</p>
       </div>
     </section>
   </div>
@@ -325,6 +326,11 @@ text-align: center;
 .wrapper-third-block-text__text--big {
   font-size: 35px !important;
   font-weight: normal;
+  color: azure;
+}
+
+.wrapper-first-block-text__text--white {
+  color:azure;
 }
 
 /* ADAPTIV */
@@ -467,7 +473,7 @@ position: relative;
  background-repeat: no-repeat;
   
   background-size: contain;
-background: url(../assets/ros.png) ;
+/* background: url(../assets/ros.png); */
 
 
 }
