@@ -18,9 +18,11 @@
       <v-divider></v-divider>
 
       <v-list dense nav>
+        <!-- <router-link to="/" @click="scrollToTop">11111</router-link>
+        <router-link to="/ceremony" @click="scrollToTop">2222</router-link> -->
         <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
           <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon color="rgb(81 138 230)">{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
@@ -42,7 +44,7 @@
       height="60px"
       width="100%"
     >
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon color="rgb(81 138 230)" @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-spacer></v-spacer>
       <v-toolbar-title class="font-lobster font-size-lobster header-main-title" 
@@ -53,13 +55,13 @@
       <v-spacer></v-spacer>
 
       <v-btn icon :to="home">
-        <v-icon>mdi-home</v-icon>
+        <v-icon color="rgb(81 138 230)">mdi-home</v-icon>
       </v-btn>
     </v-app-bar>
     <!-- END HEADER -->
 
     <!-- START MAIN CONTENT -->
-    <v-main>
+    <v-main class="main-content">
       <router-view></router-view>
     </v-main>
     <!-- END MAIN CONTENT -->
@@ -90,10 +92,16 @@ export default {
 
     home: "/",
   }),
+  methods: {
+
+  } 
 };
 </script>
 
 <style>
+.main-content{
+  height: 100%;
+}
 .main-footer {
   background: rgb(140, 190, 221)!important;
   height: 100%;

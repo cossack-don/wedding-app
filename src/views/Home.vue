@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" style="height:100%;">
    
     <img src="../assets/z.png" alt="rose" class="element-rose">
     <section class="home-first-block-wrapper home-first-block">
@@ -24,7 +24,7 @@
           <br> г. Краснодар, ул.Вишняковой, 1/5 <br>
           Ресторан "Олимп Hall" <br>
            Cбор гостей в 16:30 
-           <span class="wrapper-second-block-text__span font-lobster"> <br> До торжества осталось:</span></p>
+           <span class="wrapper-second-block-text__span wrapper-second-block-text__span--title font-lobster"> <br> До торжества осталось:</span></p>
 
            <!-- Таймер -->
           <div id="countdown" class="countdown">
@@ -151,7 +151,7 @@ export default {
   /* margin: 0 auto; */
   border-radius: 15px;
   flex-wrap: wrap;
-  margin: 15px;
+  margin: 5px;
 }
 
 .wrapper-footer-countdown,
@@ -171,8 +171,8 @@ display: flex;
   color: #ffffff;
   font-weight: bold;
   border-radius: 15px;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   font-size: 25px;
 }
 .countdown-text {
@@ -333,6 +333,10 @@ text-align: center;
   color:azure;
 }
 
+.wrapper-second-block-text__span--title {
+  font-size: 30px !important;
+  letter-spacing: 2px;
+}
 /* ADAPTIV */
 /* FIRST BLOCK */
 

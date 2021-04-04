@@ -1,20 +1,20 @@
 <template>
 <div class="ceremony pa-5">
-<p class="h3 pb-4 font-lobster">Программа</p>
+<p class=" ceremony__title h3 pb-6 font-lobster">Программа</p>
     <div class="first-day-container">
 
       <div @click="mapUseOnClick" class="first-day-map wrapper-frame-map" id="map-wrap" >
                 <iframe style="pointer-events: none;" class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a1c0bd76ecadabcf769205c7b4864f810ac8442ae0e6ff8e1af15c4d6fd0842&amp;source=constructor" width="100%" height="90%" frameborder="0"></iframe>
       </div>
 
-      <div class="first-day-list">1-й день
-
-        <ul>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
+      <div class="first-day-list">
+          <h2 class="first-day-list__title">1-й день:</h2>
+        <ul class="first-day-list__list">
+          <li class="template-style-item-event">Выкуп - время уточняется</li>
+          <div class="first-day-list__line"></div>
+          <li class="template-style-item-event">Прогулка с женихом и невестой + фотосессия (Парк Краснодар) - сразу после выкупа</li>
+          <div class="first-day-list__line"></div>
+          <li class="template-style-item-event">Ресторан Олимп Hall - сбор гостей в 16:30</li>
         </ul>
       </div>
 
@@ -25,14 +25,10 @@
     <div class="second-day-container">
 
       
-      <div class="second-day-list">2-й день
-
-                <ul>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
+      <div class="second-day-list">
+        <h2 class="second-day-list__title">2-й день:</h2>
+       <ul class="second-day-list__list">
+          <li class="template-style-item-event">Ждем вас у невесты дома в станице Ивановской, точный адрес уточняйте по телефону</li>
         </ul>
       </div>
             <div @click="mapUseOnClick" class="second-day-map wrapper-frame-map" id="map-wrap" >
@@ -116,6 +112,12 @@ export default {
 </script>
 
 <style>
+ul {
+  list-style: none;
+}
+.v-application ul {
+  padding-left: 0;
+}
 .main-wrapper-ceremony {
   display: flex;
   flex-wrap: wrap;
@@ -132,7 +134,7 @@ margin-right: auto;
 }
 
 #map-wrap {
-  height: 400px;
+  height: 600px;
 }
 
 .yandex-map {
@@ -154,26 +156,6 @@ font-weight: bold;
 /* .color-text-white {
   color: black;
 } */
-
-@media (max-width: 1100px) {
-.main-wrapper-ceremony__map {
-  width: 100%;
-  order: 1;
-}
-
-.main-wrapper-ceremony__list-events {
-  width:100%;
-  margin-left: 0;
-  margin-bottom: 50px;
-}
-
-}
-
-@media (min-width: 1100px) {
-#map-wrap {
-height: 600px;
-}
-}
 
 
 /* НОВЫЕ СТИЛИ */
@@ -211,13 +193,16 @@ background: url(../assets/el.png) repeat;
 }
 
 .first-day-list {
-  background: green;
-  height: 200px;
+  padding: 15px;
+  /* background: green; */
+  
   width: 100%;
   display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
 }
 /* second */
 .second-day-container {
@@ -232,13 +217,97 @@ background: url(../assets/el.png) repeat;
 }
 
 .second-day-list {
-  background: pink;
-  height: 200px;
+  padding: 15px;
+  /* background: pink; */
+ 
   width: 100%;
   display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
 }
 
+.first-day-list__title,
+.second-day-list__title {
+  font-family: "Lobster", cursive !important;
+color: #ffffff;
+margin-bottom: 15px;
+letter-spacing: 4px;
+font-size: 40px;
+color: rgb(81 138 230);
+}
+
+.template-style-item-event {
+  margin-bottom: 15px;
+  font-family: "Lobster", cursive !important;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 35px;
+}
+
+.first-day-list__list,
+.second-day-list__list {
+max-width:590px;
+}
+
+.first-day-list__line {
+  /* rgb(81 138 230) */
+background: rgb(81 138 230);
+height: 1px;
+-webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+
+@media (max-width: 1100px) {
+  .template-style-item-event {
+    font-size: 30px;
+  }
+.main-wrapper-ceremony__map {
+  width: 100%;
+  order: 1;
+}
+
+.main-wrapper-ceremony__list-events {
+  width:100%;
+  margin-left: 0;
+  margin-bottom: 50px;
+}
+
+}
+
+@media (min-width: 1100px) {
+#map-wrap {
+height: 600px;
+}
+}
+
+@media screen and (max-width:992px) {
+  .first-day-container,
+  .second-day-container {
+    flex-wrap: wrap;
+  }
+  .first-day-list,
+  .second-day-list {
+    order: 0;
+    /* margin-bottom: 25px; */
+  }
+  .first-day-map,
+  .second-day-map  {
+    order: 1;
+  }
+}
+
+@media screen and (max-width:550px) {
+.first-day-list__title, .second-day-list__title {
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+.template-style-item-event {
+  font-size: 20px;
+}
+}
 </style>

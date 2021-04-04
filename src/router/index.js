@@ -11,6 +11,11 @@ const routes = [
     component: Home
   },
   {
+    path: '/contacts',
+    name: 'Contacts',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Сontacts.vue')
+  },
+  {
     path: '/ceremony',
     name: 'Ceremony',
     component: () => import(/* webpackChunkName: "about" */ '../views/Ceremony.vue')
@@ -20,11 +25,7 @@ const routes = [
     name: 'Taxis and hotels',
     component: () => import(/* webpackChunkName: "about" */ '../views/Taxis and hotels.vue')
   },
-  {
-    path: '/contacts',
-    name: 'Contacts',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Сontacts.vue')
-  },
+
   // {
   //   path: '/about-us',
   //   name: 'AboutUs',
@@ -39,8 +40,14 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  // mode: 'history',
+  mode: 'history',
   base: process.env.BASE_URL,
+  // https://question-it.com/questions/223457/vuejs-prokrutite-k-nachalu-stranitsy-dlja-togo-zhe-marshruta
+  //  для того чтобы при переключение на новый роут, он начинался сверху scrollBehavior
+  scrollBehavior () {
+    // page scroll to top for all route navigations
+    return { x: 0, y: 0 }
+  },
   routes
 })
 
