@@ -1,114 +1,126 @@
 <template>
-<div class="ceremony pa-5">
-<p class=" ceremony__title h3 pb-6 font-lobster">Программа</p>
+  <div class="ceremony pa-5">
+    <p class="ceremony__title h3 pb-6 font-lobster">Программа</p>
     <div class="first-day-container">
-
-      <div @click="mapUseOnClick" class="first-day-map wrapper-frame-map" id="map-wrap" >
-                <iframe style="pointer-events: none;" class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a1c0bd76ecadabcf769205c7b4864f810ac8442ae0e6ff8e1af15c4d6fd0842&amp;source=constructor" width="100%" height="90%" frameborder="0"></iframe>
+      <div
+        @click="mapUseOnClick"
+        class="first-day-map wrapper-frame-map"
+        id="map-wrap"
+      >
+        <iframe
+          style="pointer-events: none"
+          class="yandex-map"
+          width="100%"
+          height="90%"
+          frameborder="0"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a1c0bd76ecadabcf769205c7b4864f810ac8442ae0e6ff8e1af15c4d6fd0842&amp;source=constructor"
+        ></iframe>
       </div>
 
       <div class="first-day-list">
-          <h2 class="first-day-list__title">1-й день:</h2>
+        <h2 class="first-day-list__title">1-й день:</h2>
         <ul class="first-day-list__list">
           <li class="template-style-item-event">Выкуп - время уточняется</li>
           <div class="first-day-list__line"></div>
-          <li class="template-style-item-event">Прогулка с женихом и невестой + фотосессия (Парк Краснодар) - сразу после выкупа</li>
+          <li class="template-style-item-event">
+            Прогулка с женихом и невестой + фотосессия (Парк Краснодар) - сразу
+            после выкупа
+          </li>
           <div class="first-day-list__line"></div>
-          <li class="template-style-item-event">Ресторан Олимп Hall - сбор гостей в 16:30</li>
+          <li class="template-style-item-event">
+            Ресторан Олимп Hall - сбор гостей в 16:30
+          </li>
         </ul>
       </div>
-
     </div>
 
     <!-- second day -->
 
     <div class="second-day-container">
-
-      
       <div class="second-day-list">
         <h2 class="second-day-list__title">2-й день:</h2>
-       <ul class="second-day-list__list">
-          <li class="template-style-item-event">Ждем вас у невесты дома в станице Ивановской, точный адрес уточняйте по телефону</li>
+        <ul class="second-day-list__list">
+          <li class="template-style-item-event">
+            Ждем вас у невесты дома в станице Ивановской, точный адрес уточняйте
+            по телефону
+          </li>
         </ul>
       </div>
-            <div @click="mapUseOnClick" class="second-day-map wrapper-frame-map" id="map-wrap" >
-                <iframe style="pointer-events: none;" class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a1c0bd76ecadabcf769205c7b4864f810ac8442ae0e6ff8e1af15c4d6fd0842&amp;source=constructor" width="100%" height="90%" frameborder="0"></iframe>
+      <div
+        @click="mapUseOnClick"
+        class="second-day-map wrapper-frame-map"
+        id="map-wrap"
+      >
+        <iframe
+          style="pointer-events: none"
+          class="yandex-map"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a1c0bd76ecadabcf769205c7b4864f810ac8442ae0e6ff8e1af15c4d6fd0842&amp;source=constructor"
+          width="100%"
+          height="90%"
+          frameborder="0"
+        ></iframe>
       </div>
     </div>
-
-</div>
+  </div>
 </template>
 
 <script>
-
 export default {
- 
   data() {
     return {
+      showArrows: false,
 
-      showArrows:false,
-
-      listSchedule : [
+      listSchedule: [
         {
-          icon:'mdi-hand-heart',
-          title:'Выкуп - 12:00',
-          city:'Cт. Ивановская',
-          adress:'улица уточнить'
+          icon: "mdi-hand-heart",
+          title: "Выкуп - 12:00",
+          city: "Cт. Ивановская",
+          adress: "улица уточнить",
         },
 
         {
-          icon:'mdi-human-scooter',
-          title:'Прогулка - 14:00',
-          city:'Краснодар - парк',
-          adress:'улица уточнить'
+          icon: "mdi-human-scooter",
+          title: "Прогулка - 14:00",
+          city: "Краснодар - парк",
+          adress: "улица уточнить",
         },
 
         {
-          icon:'mdi-home-city',
-          title:'Ресторан - 17:00',
-          city:'Краснодар, Олимп Холл',
-          adress:'улица Вишняковой, 1/5'
+          icon: "mdi-home-city",
+          title: "Ресторан - 17:00",
+          city: "Краснодар, Олимп Холл",
+          adress: "улица Вишняковой, 1/5",
         },
-
       ],
 
       dayTwoListSchedule: [
-
         {
-          icon:'mdi-home-flood',
-          title:'Дома в станице Ивановская'
+          icon: "mdi-home-flood",
+          title: "Дома в станице Ивановская",
         },
 
         {
-          icon:'mdi-swim',
-          title:'Купание'
+          icon: "mdi-swim",
+          title: "Купание",
         },
-
       ],
-
-    }
+    };
   },
-
 
   methods: {
     mapUseOnClick() {
-      document.addEventListener('click', function(e) {
+      document.addEventListener("click", function (e) {
+        let map = document.querySelector("#map-wrap iframe");
 
-          let map = document.querySelector('#map-wrap iframe')
-
-          if(e.target.id === 'map-wrap') {
-              map.style.pointerEvents = 'all'
-          } else {
-              map.style.pointerEvents = 'none'
-          }
-
-            })
+        if (e.target.id === "map-wrap") {
+          map.style.pointerEvents = "all";
+        } else {
+          map.style.pointerEvents = "none";
+        }
+      });
     },
-
-
   },
-
-}
+};
 </script>
 
 <style>
@@ -124,13 +136,13 @@ ul {
 }
 
 .main-wrapper-ceremony__map {
-width: 50%;
+  width: 50%;
 }
 
 .main-wrapper-ceremony__list-events {
-width: 45%;
-margin-left: 50px;
-margin-right: auto;
+  width: 45%;
+  margin-left: 50px;
+  margin-right: auto;
 }
 
 #map-wrap {
@@ -138,15 +150,14 @@ margin-right: auto;
 }
 
 .yandex-map {
-/* padding: 5px; */
-border-radius: 10px;
-background: rgb(205, 228, 243);
+  /* padding: 5px; */
+  border-radius: 10px;
+  background: rgb(205, 228, 243);
 }
 
-
 .ceremony-title {
-color: #4b51a6;
-font-weight: bold;
+  color: #4b51a6;
+  font-weight: bold;
 }
 
 .v-application .display-1 {
@@ -157,14 +168,13 @@ font-weight: bold;
   color: black;
 } */
 
-
 /* НОВЫЕ СТИЛИ */
 .ceremony {
-background: #57D7E5;
-background: -webkit-linear-gradient(left, #57D7E5, #FFD5E4);
-background: -moz-linear-gradient(left, #57D7E5, #FFD5E4);
-background: linear-gradient(to right, #57D7E5, #FFD5E4);
-height: 100%;
+  background: #57d7e5;
+  background: -webkit-linear-gradient(left, #57d7e5, #ffd5e4);
+  background: -moz-linear-gradient(left, #57d7e5, #ffd5e4);
+  background: linear-gradient(to right, #57d7e5, #ffd5e4);
+  height: 100%;
 }
 /* .ceremony::before {
   content: "";
@@ -182,7 +192,7 @@ background: url(../assets/el.png) repeat;
 /* first */
 .first-day-container {
   display: flex;
-  
+
   /* flex-wrap: wrap; */
 }
 
@@ -195,7 +205,7 @@ background: url(../assets/el.png) repeat;
 .first-day-list {
   padding: 15px;
   /* background: green; */
-  
+
   width: 100%;
   display: flex;
   /* justify-content: center; */
@@ -219,7 +229,7 @@ background: url(../assets/el.png) repeat;
 .second-day-list {
   padding: 15px;
   /* background: pink; */
- 
+
   width: 100%;
   display: flex;
   justify-content: center;
@@ -232,11 +242,11 @@ background: url(../assets/el.png) repeat;
 .first-day-list__title,
 .second-day-list__title {
   font-family: "Lobster", cursive !important;
-color: #ffffff;
-margin-bottom: 15px;
-letter-spacing: 4px;
-font-size: 40px;
-color: rgb(81 138 230);
+  color: #ffffff;
+  margin-bottom: 15px;
+  letter-spacing: 4px;
+  font-size: 40px;
+  color: rgb(81 138 230);
 }
 
 .template-style-item-event {
@@ -249,43 +259,41 @@ color: rgb(81 138 230);
 
 .first-day-list__list,
 .second-day-list__list {
-max-width:590px;
+  max-width: 590px;
 }
 
 .first-day-list__line {
   /* rgb(81 138 230) */
-background: rgb(81 138 230);
-height: 1px;
--webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
--moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  background: rgb(81 138 230);
+  height: 1px;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
-
 
 @media (max-width: 1100px) {
   .template-style-item-event {
     font-size: 30px;
   }
-.main-wrapper-ceremony__map {
-  width: 100%;
-  order: 1;
-}
+  .main-wrapper-ceremony__map {
+    width: 100%;
+    order: 1;
+  }
 
-.main-wrapper-ceremony__list-events {
-  width:100%;
-  margin-left: 0;
-  margin-bottom: 50px;
-}
-
+  .main-wrapper-ceremony__list-events {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
 }
 
 @media (min-width: 1100px) {
-#map-wrap {
-height: 600px;
-}
+  #map-wrap {
+    height: 600px;
+  }
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
   .first-day-container,
   .second-day-container {
     flex-wrap: wrap;
@@ -296,18 +304,19 @@ height: 600px;
     /* margin-bottom: 25px; */
   }
   .first-day-map,
-  .second-day-map  {
+  .second-day-map {
     order: 1;
   }
 }
 
-@media screen and (max-width:550px) {
-.first-day-list__title, .second-day-list__title {
-  margin-bottom: 5px;
-  font-size: 25px;
-}
-.template-style-item-event {
-  font-size: 20px;
-}
+@media screen and (max-width: 550px) {
+  .first-day-list__title,
+  .second-day-list__title {
+    margin-bottom: 5px;
+    font-size: 25px;
+  }
+  .template-style-item-event {
+    font-size: 20px;
+  }
 }
 </style>
