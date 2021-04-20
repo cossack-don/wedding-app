@@ -3,17 +3,18 @@
     <p class="ceremony__title h3 pb-6 font-lobster">Программа</p>
     <div class="first-day-container">
       <div
-        @click="mapUseOnClick"
+        @click="mapUseOnClickTwo"
         class="first-day-map wrapper-frame-map"
-        id="map-wrap"
+        id="map-wrap-two"
       >
+      
         <iframe
           style="pointer-events: none"
           class="yandex-map"
           width="100%"
           height="90%"
           frameborder="0"
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a1c0bd76ecadabcf769205c7b4864f810ac8442ae0e6ff8e1af15c4d6fd0842&amp;source=constructor"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Aff88d5417dc32a8c9c510527081c8b7cf254ed8d0c5f908559fd31f73c1af4d5&amp;source=constructor"
         ></iframe>
       </div>
 
@@ -109,15 +110,36 @@ export default {
 
   methods: {
     mapUseOnClick() {
-      document.addEventListener("click", function (e) {
-        let map = document.querySelector("#map-wrap iframe");
 
+      let map = document.querySelector("#map-wrap iframe");
+
+            function mapActive(e) {
         if (e.target.id === "map-wrap") {
           map.style.pointerEvents = "all";
         } else {
           map.style.pointerEvents = "none";
         }
-      });
+      }
+      
+      document.addEventListener("click", mapActive);
+
+      map.style.pointerEvents = 'auto';
+    },
+
+        mapUseOnClickTwo() {
+      let map = document.querySelector("#map-wrap-two iframe");
+
+      function mapActive(e) {
+        if (e.target.id === "map-wrap-two") {
+          map.style.pointerEvents = "all";
+        } else {
+          map.style.pointerEvents = "none";
+        }
+      }
+
+      document.addEventListener("click", mapActive);
+
+      map.style.pointerEvents = 'auto';
     },
   },
 };
@@ -148,7 +170,9 @@ ul {
 #map-wrap {
   height: 600px;
 }
-
+#map-wrap-two {
+  height: 600px;
+}
 .yandex-map {
   /* padding: 5px; */
   border-radius: 10px;
@@ -288,7 +312,7 @@ background: url(../assets/el.png) repeat;
 }
 
 @media (min-width: 1100px) {
-  #map-wrap {
+  #map-wrap,#map-wrap-two {
     height: 600px;
   }
 }

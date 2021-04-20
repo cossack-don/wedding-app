@@ -44,8 +44,18 @@
       height="60px"
       width="100%"
     >
-      <v-app-bar-nav-icon color="rgb(81 138 230)" @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon color="rgb(81 138 230)" @click="drawer = !drawer" class="main-menu">Меню</v-app-bar-nav-icon>
 
+      <v-spacer></v-spacer>
+      
+        <v-toolbar-title class="font-lobster hide-link" >
+          <router-link to="ceremony" class="header-link">Программа</router-link>
+        </v-toolbar-title>
+
+      <v-spacer></v-spacer>
+        <v-toolbar-title class="font-lobster  hide-link" >
+          <router-link to="taxis-and-hotels" class="header-link">Такси и отели</router-link>
+        </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-title class="font-lobster font-size-lobster header-main-title" 
         >Cергей и Елена
@@ -53,7 +63,12 @@
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
-
+        <v-toolbar-title class="font-lobster  hide-link" >
+          <router-link to="contacts" class="header-link">Контакты</router-link>
+        </v-toolbar-title>
+      <v-spacer></v-spacer>
+       
+      <v-spacer></v-spacer>
       <v-btn icon :to="home">
         <v-icon color="rgb(81 138 230)">mdi-home</v-icon>
       </v-btn>
@@ -98,7 +113,14 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.router-link-exact-active {
+  
+  text-decoration: revert !important;
+}
+.main-menu {
+  margin-left: 5px!important;
+}
 .main-content{
   height: 100%;
 }
@@ -114,7 +136,28 @@ export default {
 .title-left-sidebar {
   color: rgb(112, 170, 209) !important;
 }
+.v-toolbar--prominent .v-toolbar__content {
+  align-items: center !important;
+}
 
+.v-toolbar--prominent:not(.v-toolbar--bottom) .v-toolbar__title {
+  align-self: auto !important;
+}
+
+.header-link {
+  text-decoration: none;
+  transition: 0.5s;
+  &:hover {
+    color: blue;
+    transition: 0.5s;
+  }
+}
+
+@media (max-width:992px) {
+.hide-link {
+  display: none;
+}
+}
     /* скрываю иконку кольцо */
   @media (max-width: 360px) {
     .icon-ring-header {
