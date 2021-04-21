@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
@@ -26,11 +27,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Taxis and hotels.vue')
   },
 
-  // {
-  //   path: '/about-us',
-  //   name: 'AboutUs',
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutUs.vue')
-  // },
+// 404
 
   {
     path: "*",
