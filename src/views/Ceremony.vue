@@ -7,7 +7,6 @@
         class="first-day-map wrapper-frame-map"
         id="map-wrap-two"
       >
-      
         <iframe
           style="pointer-events: none"
           class="yandex-map"
@@ -21,11 +20,11 @@
       <div class="first-day-list">
         <h2 class="first-day-list__title">1-й день:</h2>
         <ul class="first-day-list__list">
-          <li class="template-style-item-event">Выкуп - время уточняется</li>
+          <li class="template-style-item-event">Выкуп - 11:00</li>
           <div class="first-day-list__line"></div>
           <li class="template-style-item-event">
             Прогулка с женихом и невестой + фотосессия (Парк Краснодар) - сразу
-            после выкупа
+            после выкупа. Примерно в 13:00 - 14:00.
           </li>
           <div class="first-day-list__line"></div>
           <li class="template-style-item-event">
@@ -110,23 +109,22 @@ export default {
 
   methods: {
     mapUseOnClick() {
-
       let map = document.querySelector("#map-wrap iframe");
 
-            function mapActive(e) {
+      function mapActive(e) {
         if (e.target.id === "map-wrap") {
           map.style.pointerEvents = "all";
         } else {
           map.style.pointerEvents = "none";
         }
       }
-      
+
       document.addEventListener("click", mapActive);
 
-      map.style.pointerEvents = 'auto';
+      map.style.pointerEvents = "auto";
     },
 
-        mapUseOnClickTwo() {
+    mapUseOnClickTwo() {
       let map = document.querySelector("#map-wrap-two iframe");
 
       function mapActive(e) {
@@ -139,7 +137,7 @@ export default {
 
       document.addEventListener("click", mapActive);
 
-      map.style.pointerEvents = 'auto';
+      map.style.pointerEvents = "auto";
     },
   },
 };
@@ -312,7 +310,8 @@ background: url(../assets/el.png) repeat;
 }
 
 @media (min-width: 1100px) {
-  #map-wrap,#map-wrap-two {
+  #map-wrap,
+  #map-wrap-two {
     height: 600px;
   }
 }
